@@ -10,7 +10,7 @@
 <title>대구결혼정보회사 귀한인연</title>
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/common.css">
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/slick/slick.css" />
-<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/slick/slick-theme.css?ver=1" />
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/slick/slick-theme.css?ver=2" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/resources/slick/slick.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -51,7 +51,7 @@
 <script>
 $(function(){
 	$(".mainBanner").slick({
-		arrows:false,
+		arrows:true,
 		infinite:true,
 		speed:500,
 		fade:true,
@@ -72,11 +72,26 @@ $(function(){
 	<section>
 		<div class="mainBannerWrap">
 			<div class="mainBanner">
-				<img src="${pageContext.request.contextPath}/resources/images/mainSlider1.png">
-				<img src="${pageContext.request.contextPath}/resources/images/mainSlider2.png">
-				<img src="${pageContext.request.contextPath}/resources/images/mainSlider3.png">
+				<img src="${pageContext.request.contextPath}/resources/images/mainBanner01.jpg">
+				<img src="${pageContext.request.contextPath}/resources/images/mainBanner01.jpg">
+				<img src="${pageContext.request.contextPath}/resources/images/mainBanner01.jpg">
 			</div>
 		</div>
+		<div class="section01Div">
+			<img src="${pageContext.request.contextPath}/resources/images/">
+		</div><!-- section01Div end -->
+		<div class="section02Div">
+			<img src="${pageContext.request.contextPath}/resources/images/">
+		</div><!-- section02Div end -->
+		<div class="section03Div">
+			<img src="${pageContext.request.contextPath}/resources/images/">
+		</div><!-- section03Div end -->
+		<div class="section04Div">
+			<img src="${pageContext.request.contextPath}/resources/images/">
+		</div><!-- section04Div end -->
+		<div class="section05Div">
+			<img src="${pageContext.request.contextPath}/resources/images/">
+		</div><!-- section05Div end -->
 	</section>
 	<footer>
 		

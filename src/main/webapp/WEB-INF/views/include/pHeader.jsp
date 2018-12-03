@@ -7,6 +7,7 @@
 @media (min-width: 768px) and (max-width: 1024px) {
 	.headerWrap{
 		width:100%;
+		background: #fff;
 	}
 	.topInfo{
 		width:100%;
@@ -16,9 +17,9 @@
 		width:100%;
 		overflow: hidden;
 		padding:10px 4%;
-		background: url("${pageContext.request.contextPath}/resources/images/Untitled_2.png") repeat-x;
-		background-size: contain;
-	}
+		background: url("${pageContext.request.contextPath}/resources/images/menuBackground.png") repeat-x;
+		background-size: contain; 
+	} 
 	.menuWrap > .logo{ 
 		float:left;
 		width:200px;
@@ -40,9 +41,10 @@
 		font-weight:600;
 	}
 }
-@media only screen and (min-width:1024px){
+@media only screen and (min-width:1025px){
 	.headerWrap{
 		width:100%;
+		background: #fff;
 	}
 	.topInfo{
 		width:100%;
