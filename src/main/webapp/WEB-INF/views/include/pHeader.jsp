@@ -22,7 +22,8 @@
 	} 
 	.menuWrap > .logo{ 
 		float:left;
-		width:200px;
+		width:165px;
+		margin-top:10px;
 	}
 	.menuWrap > .logo > img{
 		width:100%;
@@ -54,7 +55,7 @@
 		width:100%;
 		overflow: hidden;
 		padding:10px 17%;
-		background: url("${pageContext.request.contextPath}/resources/images/Untitled_2.png") repeat-x;
+		background: url("${pageContext.request.contextPath}/resources/images/menuBackground.png") repeat-x;
 		background-size: contain;
 	}
 	.menuWrap > .logo{ 
@@ -123,17 +124,17 @@
 		}
 	$(function() {
 		//$(".headerWrap > ul > li > a").eq(0).css("color","#df3638");
-		$(".headerWrap > ul > li > a").click(function(e) {
+		$(".menuWrap > ul > li > a").click(function(e) {
 			e.preventDefault();
 			
 			var divecieWidth=$(document).width();
 			
-			$(".headerWrap > ul > li > a").css("color","#5c5c5c");
-			$(this).css("color","#df3638");
+			$(".menuWrap > ul > li > a").css("color","#5c5c5c");
+			$(this).css("color","#4c22a3");
 			
 			if(divecieWidth > 1024){
 				$('html, body').animate({
-					scrollTop : $($(this).attr('href')).offset().top - 105
+					scrollTop : $($(this).attr('href')).offset().top - 108
 				}, 500, 'linear'); 
 			}else if(divecieWidth > 767 && divecieWidth < 1025){
 				$('html, body').animate({
@@ -150,13 +151,13 @@
 		<p></p>
 	</div>
 	<div class="menuWrap">
-		<a class="logo" href="${pageContext.request.contextPath}/"><img src="${pageContext.request.contextPath}/resources/images/logo_test2.png"></a>
+		<a class="logo" href="${pageContext.request.contextPath}/"><img src="${pageContext.request.contextPath}/resources/images/logo.png"></a>
 		<ul>
-			<li><a href="#section1">귀한인연소개</a></li>
-			<li><a href="#section2">특별함</a></li>
-			<li><a href="#section3">이벤트</a></li>
-			<li><a href="#section4">문의상담</a></li>
-			<li><a href="#section5">오시는 길</a></li>
+			<li><a href="#section01Div">귀한인연소개</a></li>
+			<li><a href="#section02Div">특별함</a></li>
+			<li><a href="#section03Div">이벤트</a></li>
+			<li><a href="#section04Div">문의상담</a></li>
+			<li><a href="#section05Div">오시는 길</a></li>
 		</ul>
 	</div>
 </div>
