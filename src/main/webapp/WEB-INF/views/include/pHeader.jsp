@@ -122,6 +122,7 @@
 		    }
 		  }
 		}
+	
 	$(function() {
 		//$(".headerWrap > ul > li > a").eq(0).css("color","#df3638");
 		$(".menuWrap > ul > li > a").click(function(e) {
@@ -142,7 +143,6 @@
 				}, 500, 'linear');
 			}
 		});
-		
 		
 	});
 </script>

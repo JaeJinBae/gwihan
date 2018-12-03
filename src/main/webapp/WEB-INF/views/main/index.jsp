@@ -108,6 +108,7 @@
 </style>
 <script>
 $(function(){
+	/* 메인배너 */
 	$(".mainBanner").slick({
 		arrows:true,
 		infinite:true,
@@ -145,6 +146,7 @@ $(function(){
 			<img src="${pageContext.request.contextPath}/resources/images/">
 		</div><!-- section03Div end -->
 		<div class="section04Div" id="section04Div"><!-- 문의상담 -->
+			<img src="${pageContext.request.contextPath}/resources/images/">
 			<img src="${pageContext.request.contextPath}/resources/images/">
 		</div><!-- section04Div end -->
 		<div class="section05Div" id="section05Div"><!-- 오시는 길 -->
