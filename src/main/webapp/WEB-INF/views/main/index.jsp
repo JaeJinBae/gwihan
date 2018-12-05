@@ -190,6 +190,18 @@ $(function(){
 					    // 마커에 마우스아웃 이벤트가 발생하면 인포윈도우를 제거합니다
 					    infowindow.close();
 					});
+					
+					//마커 누르면 이벤트가 발생하면 인포윈도우를 마커위에 표시합니다
+					daum.maps.event.addListener(marker, 'click', function() {
+					  	// 마커에 마우스오버 이벤트가 발생하면 인포윈도우를 마커위에 표시합니다
+					    infowindow.open(map, marker);
+					});
+					
+					// 마커 외 영역 누르면 이벤트를 등록합니다
+					daum.maps.event.addListener(map, 'click', function() {
+					    // 마커에 마우스아웃 이벤트가 발생하면 인포윈도우를 제거합니다
+					    infowindow.close();
+					});
 				</script>
 			<img src="${pageContext.request.contextPath}/resources/images/">
 		</div><!-- section05Div end -->
