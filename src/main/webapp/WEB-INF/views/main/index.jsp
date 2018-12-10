@@ -17,7 +17,74 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style type="text/css">
 @media (min-width: 320px) and (max-width:767px){
-	
+	body{
+		position: relative;
+	}
+	header{
+		width:100%;
+		position: fixed;
+		top:0;
+		z-index: 999;
+	}
+	section{
+		width:100%;
+		height:100%;
+		padding-top:108px;
+	}
+	.mainBannerWrap{
+		width:100%;
+		height:100%;
+	}
+	.mainBanner{
+		height:100%;
+	}
+	.mainBanner div{
+		height:100%;
+	}
+	.section01Div{
+		width:100%;
+		/* height:100%; */
+	}
+	.section01Div > img{
+		width:100%;
+		/* height:100%; */
+	}
+	.section02Div{
+		width:100%;
+		/* height:100%; */
+	}
+	.section02Div > img{
+		width:100%;
+		/* height:100%; */
+	}
+	.section03Div{
+		width:100%;
+		/* height:100%; */
+	}
+	.section03Div > img{
+		width:100%;
+		/* height:100%; */
+	}
+	.section04Div{
+		width:100%;
+		/* height:100%; */
+	}
+	.section04Div > img{
+		width:100%;
+		/* height:100%; */
+	}
+	.section05Div{
+		width:100%;
+		/* height:100%; */
+	}
+	.section05Div > img{
+		width:100%;
+		/* height:50%; */
+	}
+	#map{
+		width:100%;
+		height:50%;
+	}
 }
 @media (min-width: 768px) and (max-width: 1024px) {
 	body{
@@ -52,10 +119,37 @@
 		width:100%;
 		height:100%;
 	}
-	
+	.section02Div{
+		width:100%;
+		height:100%;
+	}
+	.section02Div > img{
+		width:100%;
+		height:100%;
+	}
+	.section03Div{
+		width:100%;
+		height:100%;
+	}
+	.section03Div > img{
+		width:100%;
+		height:100%;
+	}
+	.section04Div{
+		width:100%;
+		height:100%;
+	}
+	.section04Div > img{
+		width:100%;
+		height:100%;
+	}
 	.section05Div{
 		width:100%;
 		height:100%;
+	}
+	.section05Div > img{
+		width:100%;
+		height:50%;
 	}
 	#map{
 		width:100%;
@@ -95,10 +189,37 @@
 		width:100%;
 		height:100%;
 	}
-	
+	.section02Div{
+		width:100%;
+		height:100%;
+	}
+	.section02Div > img{
+		width:100%;
+		height:100%;
+	}
+	.section03Div{
+		width:100%;
+		height:100%;
+	}
+	.section03Div > img{
+		width:100%;
+		height:100%;
+	}
+	.section04Div{
+		width:100%;
+		height:100%;
+	}
+	.section04Div > img{
+		width:100%;
+		height:100%;
+	}
 	.section05Div{
 		width:100%;
 		height:100%;
+	}
+	.section05Div > img{
+		width:100%;
+		height:50%;
 	}
 	#map{
 		width:100%;
@@ -137,17 +258,16 @@ $(function(){
 			</div>
 		</div>
 		<div class="section01Div" id="section01Div"><!-- 귀한인연소개 -->
-			<img src="${pageContext.request.contextPath}/resources/images/section01_test2.jpg">
+			<img src="${pageContext.request.contextPath}/resources/images/section01_test3.jpg">
 		</div><!-- section01Div end -->
 		<div class="section02Div" id="section02Div"><!-- 특별함 -->
-			<img src="${pageContext.request.contextPath}/resources/images/">
+			<img src="${pageContext.request.contextPath}/resources/images/section02_test3.jpg">
 		</div><!-- section02Div end -->
 		<div class="section03Div" id="section03Div"><!-- 이벤트 -->
 			<img src="${pageContext.request.contextPath}/resources/images/">
 		</div><!-- section03Div end -->
 		<div class="section04Div" id="section04Div"><!-- 문의상담 -->
-			<img src="${pageContext.request.contextPath}/resources/images/">
-			<img src="${pageContext.request.contextPath}/resources/images/">
+			<img src="${pageContext.request.contextPath}/resources/images/section04_test1.jpg">
 		</div><!-- section04Div end -->
 		<div class="section05Div" id="section05Div"><!-- 오시는 길 -->
 			<div id="map" style="width:100%;height:50%;"></div>
@@ -203,7 +323,7 @@ $(function(){
 					    infowindow.close();
 					});
 				</script>
-			<img src="${pageContext.request.contextPath}/resources/images/">
+			<img src="${pageContext.request.contextPath}/resources/images/section05_test2.png">
 		</div><!-- section05Div end -->
 	</section>
 	<footer>
