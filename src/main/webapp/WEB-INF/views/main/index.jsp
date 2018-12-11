@@ -13,6 +13,7 @@
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/slick/slick-theme.css?ver=2" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/resources/slick/slick.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-rwdImageMaps/1.6/jquery.rwdImageMaps.min.js"></script>
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=c2e3ed09f957710bbd6a786c6974b3b1&libraries=drawing"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style type="text/css">
@@ -86,7 +87,7 @@
 		height:50%;
 	}
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1023px) {
 	body{
 		position: relative;
 	}
@@ -98,58 +99,58 @@
 	}
 	section{
 		width:100%;
-		height:100%;
-		padding-top:108px;
+		/* height:100%; */
+		padding-top:115px;
 	}
 	.mainBannerWrap{
 		width:100%;
-		height:100%;
+		/* height:100%; */
 	}
 	.mainBanner{
-		height:100%;
+		width:100%;
+		/* height:100%; */
 	}
 	.mainBanner div{
-		height:100%;
+		width:100%;
+		/* height:100%; */
 	}
 	.section01Div{
 		width:100%;
-		height:100%;
+		/* height:100%; */
 	}
 	.section01Div > img{
 		width:100%;
-		height:100%;
+		/* height:100%; */
 	}
 	.section02Div{
 		width:100%;
-		height:100%;
+		/* height:100%; */
 	}
 	.section02Div > img{
 		width:100%;
-		height:100%;
+		/* height:100%; */
 	}
 	.section03Div{
 		width:100%;
-		height:100%;
+		/* height:100%; */
 	}
 	.section03Div > img{
 		width:100%;
-		height:100%;
+		/* height:100%; */
 	}
 	.section04Div{
 		width:100%;
-		height:100%;
-	}
-	.section04Div > img{
-		width:100%;
-		height:100%;
+		/* height:100%; */
+		background: url("${pageContext.request.contextPath}/resources/images/section04_test2.jpg") no-repeat;
+		background-size: cover;
 	}
 	.section05Div{
 		width:100%;
-		height:100%;
+		/* height:100%; */
 	}
 	.section05Div > img{
 		width:100%;
-		height:50%;
+		/* height:50%; */
 	}
 	#map{
 		width:100%;
@@ -164,12 +165,12 @@
 		width:100%;
 		position: fixed;
 		top:0;
-		z-index: 999;
+		z-index: 999; 
 	}
 	section{
 		width:100%;
 		height:100%;
-		padding-top:108px;
+		padding-top:150px;
 	}
 	.mainBannerWrap{
 		width:100%;
@@ -208,10 +209,98 @@
 	.section04Div{
 		width:100%;
 		height:100%;
+		background: url("${pageContext.request.contextPath}/resources/images/section04_test2.jpg") no-repeat;
+		background-size: cover;
+		position: relative;
 	}
-	.section04Div > img{
+	.section04Div > .formWrap{
+		width:365px;
+		position: absolute;
+		top:15vh;
+		right:17vw;
+	}
+	.section04Div > .formWrap > h1{
+		color:#744179;
+		font-size: 6vh; 
+		font-family: sans-serif;
+		font-weight: bold !important;
+		text-align: center;
+		margin-bottom:40px;
+	}
+	.section04Div > .formWrap > #f1 table tr td{
+		font-size:20px;
+		padding-bottom:15px;
+	}
+	.f_color_red{
+		color:red;
+	}
+	.section04Div > .formWrap > #f1 table tr td:first-child{
+		padding-right:15px;
+	}
+	#f1 > table tr td >input[type='text']{
+		width:190px;
+		height:30px;
+		font-size:17px;
+	}
+	.privacyPolicy{
 		width:100%;
-		height:100%;
+	}
+	.privacyPolicy > p{
+		text-align: right;
+		border-bottom:1px solid gray;
+		padding:10px;
+	}
+	.privacyPolicy > p > span{
+		font-size:18px;
+		cursor:pointer;
+	}
+	.privacyPolicy > p > span:hover{
+		font-weight: bold;
+	}
+	.yakkwan{
+		display:none;
+		background: #fff;
+		padding:15px 10px;
+		position: absolute;
+		top:0;
+		left:0;
+		border:1px solid lightgray;
+	}
+	.privacy_txt{
+		width:95%;
+		height:150px;
+		overflow:scroll;
+		margin:15px auto;
+		border:1px solid gray;
+		padding:10px 5px;
+		font-size:14px;
+	}
+	.privacyCheckBox{
+		font-size:18px;
+		text-align: center;
+		margin-top:10px;
+	}
+	.closeBtn{
+		width:100%;
+		text-align: center;
+	}
+	.closeBtn > span{
+		font-size:15px;
+		cursor: pointer;
+	}
+	.submitBtn{
+		text-align: center;
+		margin-top:15px;
+	}
+	.submitBtn > input{
+		font-size:18px;
+		font-weight: bold;
+		padding:5px;
+		border:0;
+		border-radius: 5px;
+		background: pink;
+		cursor: pointer;
+		color:#744179;
 	}
 	.section05Div{
 		width:100%;
@@ -240,6 +329,53 @@ $(function(){
 		autoplaySpeed:4000,
 		dots:true,
 	});	
+	$(".yakkwanShowBtn").click(function(){
+		$(".yakkwan").css("display","block");
+	});
+	$(".closeBtn").click(function(){
+		$(".yakkwan").css("display","none");
+	});
+	
+	//이벤트 이미지맵 반응형
+	$('img[usemap]').rwdImageMaps();
+	
+	
+	//상담신청 예외처리
+	$("#f1").submit(function(){
+		var name=$("input[name='name']").val();
+		var call=$("input[name='call']").val();
+		var gender=$("input[name='gender']:checked").val();
+		var marry=$("input[name='marry']:checked").val();
+		var city=$("input[name='job']").val();
+		var agreement1=$("input[name='privacy']").prop("checked");
+		var agreement2=$("input[name='agreement']").prop("checked");
+		
+		if(agreement1==false || agreement2==false){
+			alert("개인정보 수집 및 이용, 개인정보 제공 동의를 하지 않으면 상담신청이 불가능합니다.");
+			return false;
+		}
+		if(name=="" || name==null){
+			alert("이름을 입력해 주세요.");
+			return false;
+		}
+		if(call=="" || call==null){
+			alert("전화번호를 입력해 주세요.");
+			return false;
+		}
+		if(gender=="" || gender==null){
+			alert("성별을 선택해 주세요.");
+			return false;
+		}
+		if(marry=="" || marry==null){
+			alert("결혼이력을 선택해 주세요.");
+			return false;
+		}
+		if(job=="" || job==null){
+			alert("직업을 입력해 주세요.");
+			return false;
+		}
+		
+	});
 });
 </script>
 </head>
@@ -264,10 +400,68 @@ $(function(){
 			<img src="${pageContext.request.contextPath}/resources/images/section02_test3.jpg">
 		</div><!-- section02Div end -->
 		<div class="section03Div" id="section03Div"><!-- 이벤트 -->
-			<img src="${pageContext.request.contextPath}/resources/images/">
+			<img src="${pageContext.request.contextPath}/resources/images/section03_test2.jpg" usemap="#imgmap201812112013">
+			<map id="imgmap201812112013" name="imgmap201812112013">
+				<area shape="rect" alt="귀한인연 이벤트 더보기" title="" coords="867,728,1052,794" href="https://blog.naver.com/sygy2017/221223524684" target="" />
+			</map>
 		</div><!-- section03Div end -->
 		<div class="section04Div" id="section04Div"><!-- 문의상담 -->
-			<img src="${pageContext.request.contextPath}/resources/images/section04_test1.jpg">
+			<div class="formWrap">
+				<h1>간편상담신청</h1>
+				<form id="f1" method="post" action="sendMail">
+					<table>
+						<tr>
+							<td><span class="f_color_red">*</span>이름</td>
+							<td><input type="text" name="name"></td>
+						</tr>
+						<tr>
+							<td><span class="f_color_red">*</span>연락처</td>
+							<td><input type="text" name="call"></td>
+						</tr>
+						<tr>
+							<td><span class="f_color_red">*</span>성별</td>
+							<td>
+								<input type="radio" name="gender" value="남성">남성&nbsp;&nbsp;
+								<input type="radio" name="gender" value="여성">여성
+							</td>
+						</tr>
+						<tr>
+							<td><span class="f_color_red">*</span>결혼이력</td>
+							<td>
+								<input type="radio" name="marry" value="초혼">초혼&nbsp;&nbsp;
+								<input type="radio" name="marry" value="재혼">재혼
+							</td>
+						</tr>
+						<tr>
+							<td><span class="f_color_red">*</span>거주지</td>
+							<td><input type="text" name="city"></td>
+						</tr>
+						<tr>
+							<td><span class="f_color_red">*</span>직업</td>
+							<td><input type="text" name="job"></td>
+						</tr>
+					</table>
+					<div class="privacyPolicy">
+						<p><span class="yakkwanShowBtn">약관보기</span></p>
+						<div class="privacyCheckBox">
+							<input type="checkbox" name="privacy">개인정보수집 및 이용 동의 &nbsp;
+							<input type="checkbox" name="agreement">개인정보 제공 동의
+						</div>
+					</div>
+					<p class="submitBtn"><input type="submit" value="상담신청"></p>
+				</form>
+				<div class="yakkwan">
+					<h4>개인정보의 제공에 관한 사항 동의</h4>
+					<div class="privacy_txt">
+						<jsp:include page="../privacy_txt2.jsp"></jsp:include>
+					</div>
+					<h4>개인정보 수집 및 이용안내 동의</h4>
+					<div class="privacy_txt">
+						<jsp:include page="../privacy_txt.jsp"></jsp:include>
+					</div>
+					<p class="closeBtn"><span>[ 닫기 ]</span></p>
+				</div><!-- yakkwan end -->
+			</div><!-- formWrap end -->
 		</div><!-- section04Div end -->
 		<div class="section05Div" id="section05Div"><!-- 오시는 길 -->
 			<div id="map" style="width:100%;height:50%;"></div>
@@ -323,7 +517,7 @@ $(function(){
 					    infowindow.close();
 					});
 				</script>
-			<img src="${pageContext.request.contextPath}/resources/images/section05_test2.png">
+			<img src="${pageContext.request.contextPath}/resources/images/section05_test4.jpg"> 
 		</div><!-- section05Div end -->
 	</section>
 	<footer>

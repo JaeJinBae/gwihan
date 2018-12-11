@@ -4,14 +4,14 @@
 @media (min-width: 320px) and (max-width:767px){
 	
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1023px) {
 	.headerWrap{
 		width:100%;
 		background: #fff;
 	}
 	.topInfo{
 		width:100%;
-		margin:0 auto;
+		margin:0 auto;	
 	}
 	.menuWrap{
 		width:100%;
@@ -42,7 +42,7 @@
 		font-weight:600;
 	}
 }
-@media only screen and (min-width:1025px){
+@media only screen and (min-width:1024px){
 	.headerWrap{
 		width:100%;
 		background: #fff;
@@ -50,6 +50,15 @@
 	.topInfo{
 		width:100%;
 		margin:0 auto;
+		background: pink;
+	}
+	.topInfo > p{
+		width:62%;
+		margin:0 auto;
+		text-align: right;
+		font-weight: bold;
+		font-size:20px;
+		line-height: 42px;
 	}
 	.menuWrap{
 		width:100%;
@@ -78,7 +87,7 @@
 	.menuWrap > ul > li > a{
 		font-size:20px;
 		font-weight:600;
-	}
+	} 
 }
 </style>
 <script>
@@ -135,7 +144,7 @@
 			
 			if(divecieWidth > 1024){
 				$('html, body').animate({
-					scrollTop : $($(this).attr('href')).offset().top - 108
+					scrollTop : $($(this).attr('href')).offset().top - 150
 				}, 500, 'linear'); 
 			}else if(divecieWidth > 767 && divecieWidth < 1025){
 				$('html, body').animate({
@@ -148,7 +157,7 @@
 </script>
 <div class="headerWrap">
 	<div class="topInfo">
-		<p></p>
+		<p>전화상담 :<a href="tel:053-626-4545">&nbsp; 053-626-4545</a>, <a href="tel:010-5515-4633">010-5515-4633</a> &nbsp;&nbsp;|&nbsp;&nbsp; 카카오상담 :&nbsp;@두번째인연</p>
 	</div>
 	<div class="menuWrap">
 		<a class="logo" href="${pageContext.request.contextPath}/"><img src="${pageContext.request.contextPath}/resources/images/logo.png"></a>
