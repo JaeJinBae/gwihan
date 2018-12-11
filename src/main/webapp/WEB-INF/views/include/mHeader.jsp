@@ -1,25 +1,32 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <style>
-@media only screen and (min-width: 320px) and (max-width: 767px){
-	.headerWrap{
+	.menuBg{display:none;position:fixed;top:0px;left:0px;background-color:rgba(0, 0, 0, 0.8);width:100%;height:100%;z-index:1;}
+	.mHeaderWrap{
 		width:100%;
 		text-align: center;
-		margin-top:13px;
-		margin-bottom:10px;
+		padding-bottom:4px;
 		position: relative;
+		border-bottom:1px solid lightgray;
 	}
-	.logo{
-		/* width:350px; */
+	.mTopInfo{
+		background: pink;
+		padding:5px 0;
+		margin-bottom:5px;
+	}
+	.mTopInfo > p{
+		font-size:16px;
+	}
+	.mLogo{
 		margin:0 auto;
 	}
-	.logo > img{
-		width:120px;
+	.mLogo > img{
+		width:150px; 
 	}
 	.menuIcon{
 		width:30px;
 		position:absolute;
-		top:-5px;
+		top:38px;
 		right:20px;
 	}
 	.menuIcon > img{
@@ -27,12 +34,12 @@
 	}
 	.sidenav {
 	    height: 100%; /* 100% Full-height */
-	    width: 0; /* 0 width - change this with JavaScript */
+	    width: 250px; /* 0 width - change this with JavaScript */
 	    position: fixed; /* Stay in place */
 	    z-index: 1; /* Stay on top */
 	    top: 0; /* Stay at the top */
-	    right: 0;
-	    background: #777;
+	    right: -250px;
+	    background: pink;
 	    overflow-x: hidden; /* Disable horizontal scroll */
 	    padding-top: 40px; /* Place content 60px from the top */
 	    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
@@ -43,13 +50,16 @@
 	    left:0;
 	    font-size: 18px;
 	    margin-left: 20px;
-	    color:#fff;
+	    color:#363636;
 	}
 	.homeBtn > img{
-		width:21px;
+		display:inline-block;
+		width:25px;
+		margin-top:-2px;
 	}
 	.homeBtn > span{
 		margin-left:10px;
+		font-weight:600;
 	}
 	.sidenav .closebtn {
 	    position: absolute;
@@ -57,53 +67,81 @@
 	    right: 16px;
 	    font-size: 40px;
 	    margin-left: 50px;
-	    color:#fff;
+	    color:#363636;
 	}
 	.sidenav > hr{
 		margin-top:15px;
 		margin-bottom:0;
 		border:0;
-		border-top:2px solid #fff;
+		border-top:2px solid #5f5f5f;
 	}
 	.sidenav .mainMenu > li{
-		/* margin-bottom:13px; */
-		border-bottom:1px solid #fff;
+		border-bottom:1px solid #444;
 		text-align: left;
 	}
 	.sidenav .mainMenu > li > p {
 	    padding: 13px 8px 13px 20px;
 	    text-decoration: none;
 	    font-size: 16px;
-	    color: #fff;
+	    color: #444;
 	    display: block;
 	    transition: 0.3s;
+	    font-weight:600;
 	}
-	.sidenav .mainMenu > li > p > a{
-		color:#fff;
-	}
-	/* .sidenav .mainMenu > li > p > img{
-		width:20px;
+	.sidenav .mainMenu > li > p > img{
+		width:12px;
 		float:right;
 		margin-right:10px;
-	} */
-	/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-	/* #main {
-	    transition: margin-right .5s;
-	    padding: 20px;
-	} */
-}
+	}
+	.mCallInfo{
+		width:100%;
+		border:1px solid lightgray;
+		padding:15px;
+		margin-top:20px;
+		background: #fff;
+	}
+	.mCallInfoTitle{
+		margin-bottom:10px;
+		font-size:20px;
+	}
+	.mCallInfoTitle:not(#mCallInfoTitle){
+		margin-top:15px;
+	}
+	.mCallInfo > h3 > a{
+		font-weight:600;	
+		color: #4c22a3;
+		font-size:25px;
+	}
+	.mCallInfo > .secondChild{
+		margin-bottom:8px;
+	}
+	.mCallInfo > h5{
+		font-size:21px;
+		font-weight:600;
+	}
+	.mCallInfo > .mCallInfoTitle:not(#mCallInfoTitle) ~ h5{
+		font-weight:500;
+		font-size:22px;
+	}
+	.mSmalltxt{
+		font-size:14px;
+	}
+	.blank{
+		display:inline-block;
+		margin-left:3px; 
+	}
 </style>
 <script>
 	// sideNavBar
 	function openNav() {
 	    document.getElementById("mySidenav").style.width = "250px";
-	    document.getElementById("main").style.marginRight = "250px";
-	    document.body.style.backgroundColor = "rgba(54,39,25,0.4)";
+	    document.getElementById("mySidenav").style.right = "0px";
+	    $(".menuBg").css({"display":"block"});
 	}
 	function closeNav() {
-	    document.getElementById("mySidenav").style.width = "0";
+	    document.getElementById("mySidenav").style.right = "-250px";
 	    document.getElementById("main").style.marginRight = "0";
-	    document.body.style.backgroundColor = "white";
+	    $(".menuBg").css({"display":"none"});
 	}
 	
 	$(function(){
@@ -112,16 +150,18 @@
 		$(".mainMenu > li > p > a").click(function(){
 			closeNav();
 			$('html, body').animate({
-				scrollTop : $($(this).attr('href')).offset().top - 57
+				scrollTop : $($(this).attr('href')).offset().top - 100
 			}, 500, 'linear');
 		});
-		
-		
-	});	
+	});
 </script>
-<div class="headerWrap"><!-- mobileMenu.png -->
-	<a class="logo" href="${pageContext.request.contextPath}/"><img src="${pageContext.request.contextPath}/resources/images/logo2.png"></a>
+<div class="mHeaderWrap">
+	<div class="mTopInfo">
+		<p>전화상담 :<a href="tel:053-626-4545">&nbsp; 053-626-4545</a>&nbsp;&nbsp;|&nbsp;&nbsp; 카카오상담 :&nbsp;@두번째인연</p>
+	</div>
+	<a class="mLogo" href="${pageContext.request.contextPath}/"><img src="${pageContext.request.contextPath}/resources/images/logo.png"></a>
 	<p class="menuIcon" onclick="openNav()"><img src="${pageContext.request.contextPath}/resources/images/mobileMenu.png"></p>
+	<div class="menuBg"></div>
 	<div id="mySidenav" class="sidenav">
 		<a class="homeBtn" href="${pageContext.request.contextPath}/">
 			<img src="${pageContext.request.contextPath}/resources/images/mobileHomeIcon.png">
@@ -131,20 +171,29 @@
 		<hr>
 		<ul class="mainMenu">
 			<li>
-				<p><a href="#section1">회사소개</a></p>
+				<p><a href="#section01Div">귀한인연소개</a> <img src="${pageContext.request.contextPath}/resources/images/ico_arr_nav_right.png"></p>
 			</li>
 			<li>
-				<p><a href="#section2">취급품목</a></p>
+				<p><a href="#section02Div">특별함</a> <img src="${pageContext.request.contextPath}/resources/images/ico_arr_nav_right.png"></p>
 			</li>
 			<li>
-				<p><a href="#section3">오시는 길</a></p>
+				<p><a href="#section03Div">이벤트</a> <img src="${pageContext.request.contextPath}/resources/images/ico_arr_nav_right.png"></p>
 			</li>
 			<li>
-				<p><a href="#section4">장착사례</a></p>
+				<p><a href="#section04Div">상담문의</a><img src="${pageContext.request.contextPath}/resources/images/ico_arr_nav_right.png"></p>
 			</li>
 			<li>
-				<p><a href="#section5">취급브랜드</a></p>
+				<p><a href="#section05Div">오시는 길</a><img src="${pageContext.request.contextPath}/resources/images/ico_arr_nav_right.png"></p>
 			</li>
 		</ul>
+		<div class="mCallInfo">
+			<h4 class="mCallInfoTitle" id="mCallInfoTitle">상담센터</h4>
+			<h3><a href="tel:053-626-4545">053-626-4545</a></h3>
+			<h5>카카오톡 @두번째인연</h5>
+			<h4 class="mCallInfoTitle">방문상담</h4>
+			<h5>AM 09:00<span class="blank"> ~ PM 06:00</span></h5>
+			<h4 class="mCallInfoTitle">전화상담<span class="mSmalltxt">&nbsp;(주말가능)</span></h4>
+			<h5>AM 09:00<span class="blank"> ~ PM 10:00</span></h5>
+		</div><!-- callInfo end -->
 	</div>
 </div>

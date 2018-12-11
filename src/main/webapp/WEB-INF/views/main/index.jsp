@@ -4,7 +4,7 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <!DOCTYPE html>
-<html>
+<html id="main">
 <head>
 <meta charset="UTF-8">
 <title>대구결혼정보회사 귀한인연</title>
@@ -26,138 +26,501 @@
 		position: fixed;
 		top:0;
 		z-index: 999;
+		background: #fff;
+	}
+	.headerWrapDiv{
+		background: url("${pageContext.request.contextPath}/resources/images/menuBackground.png");
+		background-size: contain;
 	}
 	section{
 		width:100%;
 		height:100%;
-		padding-top:108px;
+		padding-top:100px;
 	}
 	.mainBannerWrap{
 		width:100%;
-		height:100%;
 	}
 	.mainBanner{
-		height:100%;
+		width:100%;
 	}
 	.mainBanner div{
-		height:100%;
+		width:100%;
+	}
+	.slick-dotted.slick-slider{
+		margin-bottom:0 !important;
+	}
+	.slick-next{
+		right:0 !important;
+	} 
+	.slick-prev{
+		left:0 !important;
+	}
+	.slick-prev:before, .slick-next:before {
+		font-size:28px !important;
+	}
+	.pc_img, .tablet_img{
+		display:none;
 	}
 	.section01Div{
 		width:100%;
-		/* height:100%; */
+		
 	}
 	.section01Div > img{
 		width:100%;
-		/* height:100%; */
+		
 	}
 	.section02Div{
 		width:100%;
-		/* height:100%; */
+		
 	}
 	.section02Div > img{
 		width:100%;
-		/* height:100%; */
+		
 	}
 	.section03Div{
 		width:100%;
-		/* height:100%; */
+		
 	}
 	.section03Div > img{
 		width:100%;
-		/* height:100%; */
 	}
 	.section04Div{
 		width:100%;
-		/* height:100%; */
-	}
-	.section04Div > img{
-		width:100%;
-		/* height:100%; */
-	}
-	.section05Div{
-		width:100%;
-		/* height:100%; */
-	}
-	.section05Div > img{
-		width:100%;
-		/* height:50%; */
-	}
-	#map{
-		width:100%;
-		height:50%;
-	}
-}
-@media (min-width: 768px) and (max-width: 1023px) {
-	body{
+		height:100%;
+		background: url("${pageContext.request.contextPath}/resources/images/tablet_section04.jpg") no-repeat;
+		background-size: cover;
 		position: relative;
 	}
-	header{
+	.section04Div > .formWrap{
 		width:100%;
-		position: fixed;
+	}
+	.section04Div > .formWrap > h1{
+		color:#744179;
+		font-size: 33px; 
+		font-family: sans-serif;
+		font-weight: bold !important;
+		text-align: center;
+		padding:30px 0;
+	}
+	.section04Div > .formWrap > #f1 > table{
+		margin:0 auto; 
+	} 
+	.section04Div > .formWrap > #f1 table tr td{
+		font-size:20px;
+		padding-bottom:15px;
+	}
+	.f_color_red{
+		color:red;
+	}
+	.section04Div > .formWrap > #f1 table tr td:first-child{
+		padding-right:15px;
+	}
+	#f1 > table tr td >input[type='text']{
+		width:190px;
+		height:30px;
+		font-size:17px;
+	}
+	.privacyPolicy{
+		width:100%;
+	}
+	.privacyPolicy > p{
+		text-align: right;
+		border-bottom:1px solid gray;
+		padding:10px;
+	}
+	.privacyPolicy > p > span{
+		font-size:18px;
+		cursor:pointer;
+	}
+	.privacyPolicy > p > span:hover{
+		font-weight: bold;
+	}
+	.yakkwan{
+		display:none;
+		background: #fff;
+		padding:15px 10px;
+		position: absolute;
 		top:0;
-		z-index: 999;
+		left:0;
+		border:1px solid lightgray;
 	}
-	section{
-		width:100%;
-		/* height:100%; */
-		padding-top:115px;
+	.privacy_txt{
+		width:95%;
+		height:150px;
+		overflow:scroll;
+		margin:15px auto;
+		border:1px solid gray;
+		padding:10px 5px;
+		font-size:14px;
 	}
-	.mainBannerWrap{
-		width:100%;
-		/* height:100%; */
+	.privacyCheckBox{
+		font-size:18px;
+		text-align: center;
+		margin-top:10px;
 	}
-	.mainBanner{
+	.closeBtn{
 		width:100%;
-		/* height:100%; */
+		text-align: center;
 	}
-	.mainBanner div{
-		width:100%;
-		/* height:100%; */
+	.closeBtn > span{
+		font-size:15px;
+		cursor: pointer;
 	}
-	.section01Div{
-		width:100%;
-		/* height:100%; */
+	.submitBtn{
+		text-align: center;
+		margin-top:15px;
 	}
-	.section01Div > img{
-		width:100%;
-		/* height:100%; */
-	}
-	.section02Div{
-		width:100%;
-		/* height:100%; */
-	}
-	.section02Div > img{
-		width:100%;
-		/* height:100%; */
-	}
-	.section03Div{
-		width:100%;
-		/* height:100%; */
-	}
-	.section03Div > img{
-		width:100%;
-		/* height:100%; */
-	}
-	.section04Div{
-		width:100%;
-		/* height:100%; */
-		background: url("${pageContext.request.contextPath}/resources/images/section04_test2.jpg") no-repeat;
-		background-size: cover;
+	.submitBtn > input{
+		font-size:18px;
+		font-weight: bold;
+		padding:5px;
+		border:0;
+		border-radius: 5px;
+		background: pink;
+		cursor: pointer;
+		color:#744179;
 	}
 	.section05Div{
 		width:100%;
-		/* height:100%; */
-	}
-	.section05Div > img{
-		width:100%;
-		/* height:50%; */
+		height:100%;
 	}
 	#map{
 		width:100%;
 		height:50%;
 	}
+	.section05Div > img{
+		width:100%;
+	}
 }
-@media only screen and (min-width:1024px){
+@media (min-width: 768px) and (max-width: 1024px) {
+	@media only screen and (orientation:portrait){
+		body{
+			position: relative;
+		}
+		header{
+			width:100%;
+			position: fixed;
+			top:0;
+			z-index: 999; 
+		}
+		section{
+			width:100%;
+			height:100%;
+			padding-top:128px;
+		}
+		.mainBannerWrap{
+			width:100%;
+		}
+		.mainBanner{
+			width:100%;
+		}
+		.mainBanner div{
+			width:100%;
+		}
+		.slick-dotted.slick-slider{
+			margin-bottom:0 !important;
+		}
+		.pc_img, .mobile_img{
+			display:none;
+		}
+		.section01Div{
+			width:100%;
+			
+		}
+		.section01Div > img{
+			width:100%;
+			
+		}
+		.section02Div{
+			width:100%;
+			
+		}
+		.section02Div > img{
+			width:100%;
+			
+		}
+		.section03Div{
+			width:100%;
+			
+		}
+		.section03Div > img{
+			width:100%;
+		}
+		.section04Div{
+			width:100%;
+			height:100%;
+			background: url("${pageContext.request.contextPath}/resources/images/tablet_section04.jpg") no-repeat;
+			background-size: cover;
+			position: relative;
+		}
+		.section04Div > .formWrap{
+			width:380px;
+			margin: 0 auto;
+			padding-top:90px;
+		}
+		.section04Div > .formWrap > h1{
+			color:#744179;
+			font-size: 5.5vh; 
+			font-family: sans-serif;
+			font-weight: bold !important;
+			text-align: center;
+			margin-bottom:50px;
+		}
+		.section04Div > .formWrap > #f1 table{
+			margin:0 auto;
+		}
+		.section04Div > .formWrap > #f1 table tr td{
+			font-size:20px;
+			padding-bottom:15px;
+		}
+		.f_color_red{
+			color:red;
+		}
+		.section04Div > .formWrap > #f1 table tr td:first-child{
+			padding-right:15px;
+		}
+		#f1 > table tr td >input[type='text']{
+			width:190px;
+			height:30px;
+			font-size:17px;
+		}
+		.privacyPolicy{
+			width:100%;
+		}
+		.privacyPolicy > p{
+			text-align: right;
+			border-bottom:1px solid gray;
+			padding:10px;
+		}
+		.privacyPolicy > p > span{
+			font-size:18px;
+			cursor:pointer;
+		}
+		.privacyPolicy > p > span:hover{
+			font-weight: bold;
+		}
+		.yakkwan{
+			display:none;
+			background: #fff;
+			padding:15px 10px;
+			position: absolute;
+			top:0;
+			left:0;
+			border:1px solid lightgray;
+		}
+		.privacy_txt{
+			width:95%;
+			height:150px;
+			overflow:scroll;
+			margin:15px auto;
+			border:1px solid gray;
+			padding:10px 5px;
+			font-size:14px;
+		}
+		.privacyCheckBox{
+			font-size:18px;
+			text-align: center;
+			margin-top:10px;
+		}
+		.closeBtn{
+			width:100%;
+			text-align: center;
+		}
+		.closeBtn > span{
+			font-size:15px;
+			cursor: pointer;
+		}
+		.submitBtn{
+			text-align: center;
+			margin-top:15px;
+		}
+		.submitBtn > input{
+			font-size:18px;
+			font-weight: bold;
+			padding:5px;
+			border:0;
+			border-radius: 5px;
+			background: pink;
+			cursor: pointer;
+			color:#744179;
+		}
+		.section05Div{
+			width:100%;
+			height:100%;
+		}
+		#map{
+			width:100%;
+			height:50%;
+		}
+		.section05Div > img{
+			width:100%;
+		}
+	}
+	@media only screen and (orientation:landscape){
+		body{
+			position: relative;
+		}
+		header{
+			width:100%;
+			position: fixed;
+			top:0;
+			z-index: 999; 
+		}
+		section{
+			width:100%;
+			height:100%;
+			padding-top:129px;
+		}
+		.mainBannerWrap{
+			width:100%;
+			height:100%;
+		}
+		.mainBanner{
+			height:100%;
+		}
+		.tablet_img, .mobile_img{
+			display:none;
+		}
+		.mainBanner div{
+			height:100%;
+		}
+		.section01Div{
+			width:100%;
+			height:100%;
+		}
+		.section01Div > img{
+			width:100%;
+			height:100%;
+		}
+		.section02Div{
+			width:100%;
+			height:100%;
+		}
+		.section02Div > img{
+			width:100%;
+			height:100%;
+		}
+		.section03Div{
+			width:100%;
+			height:100%;
+		}
+		.section03Div > img{
+			width:100%;
+			height:100%;
+		}
+		.section04Div{
+			width:100%;
+			height:100%;
+			background: url("${pageContext.request.contextPath}/resources/images/pc_section04.jpg") no-repeat;
+			background-size: cover;
+			position: relative;
+		}
+		.section04Div > .formWrap{
+			width:365px;
+			position: absolute;
+			top:12vh;
+			right:6vw;
+		}
+		.section04Div > .formWrap > h1{
+			color:#744179;
+			font-size: 5.5vh; 
+			font-family: sans-serif;
+			font-weight: bold !important;
+			text-align: center;
+			margin-bottom:30px;
+		}
+		.section04Div > .formWrap > #f1 table tr td{
+			font-size:18px;
+			padding-bottom:10px;
+		}
+		.f_color_red{
+			color:red;
+		}
+		.section04Div > .formWrap > #f1 table tr td:first-child{
+			padding-right:15px;
+		}
+		#f1 > table tr td >input[type='text']{
+			width:190px;
+			height:28px;
+			font-size:15px;
+		}
+		.privacyPolicy{
+			width:100%;
+		}
+		.privacyPolicy > p{
+			text-align: right;
+			border-bottom:1px solid gray;
+			padding:10px;
+		}
+		.privacyPolicy > p > span{
+			font-size:16px;
+			cursor:pointer;
+		}
+		.privacyPolicy > p > span:hover{
+			font-weight: bold;
+		}
+		.yakkwan{
+			display:none;
+			background: #fff;
+			padding:15px 10px;
+			position: absolute;
+			top:0;
+			left:0;
+			border:1px solid lightgray;
+		}
+		.privacy_txt{
+			width:95%;
+			height:150px;
+			overflow:scroll;
+			margin:15px auto;
+			margin-top:5px;
+			border:1px solid gray;
+			padding:10px 5px;
+			font-size:14px;
+		}
+		.privacyCheckBox{
+			font-size:16px;
+			text-align: center;
+			margin-top:10px;
+		}
+		.closeBtn{
+			width:100%;
+			text-align: center;
+		}
+		.closeBtn > span{
+			font-size:15px;
+			cursor: pointer;
+		}
+		.submitBtn{
+			text-align: center;
+			margin-top:15px;
+		}
+		.submitBtn > input{
+			font-size:18px;
+			font-weight: bold;
+			padding:5px;
+			border:0;
+			border-radius: 5px;
+			background: pink;
+			cursor: pointer;
+			color:#744179;
+		}
+		.section05Div{
+			width:100%;
+			height:100%;
+		}
+		#map{
+			width:100%;
+			height:55% !important;
+		}
+		.section05Div > img{
+			width:100%;
+			height:45%;
+		}
+	}
+	
+}
+@media only screen and (min-width:1025px){
 	body{
 		position: relative;
 	}
@@ -179,6 +542,9 @@
 	.mainBanner{
 		height:100%;
 	}
+	.tablet_img, .mobile_img{
+		display:none;
+	}
 	.mainBanner div{
 		height:100%;
 	}
@@ -209,7 +575,7 @@
 	.section04Div{
 		width:100%;
 		height:100%;
-		background: url("${pageContext.request.contextPath}/resources/images/section04_test2.jpg") no-repeat;
+		background: url("${pageContext.request.contextPath}/resources/images/pc_section04.jpg") no-repeat;
 		background-size: cover;
 		position: relative;
 	}
@@ -315,6 +681,7 @@
 		height:50%;
 	}
 }
+
 </style>
 <script>
 $(function(){
@@ -394,15 +761,29 @@ $(function(){
 			</div>
 		</div>
 		<div class="section01Div" id="section01Div"><!-- 귀한인연소개 -->
-			<img src="${pageContext.request.contextPath}/resources/images/section01_test3.jpg">
+			<img class="pc_img" src="${pageContext.request.contextPath}/resources/images/pc_section01.jpg">
+			<img class="tablet_img" src="${pageContext.request.contextPath}/resources/images/tablet_section01.jpg">
+			<img class="mobile_img" src="${pageContext.request.contextPath}/resources/images/mobile_section01.jpg">
 		</div><!-- section01Div end -->
 		<div class="section02Div" id="section02Div"><!-- 특별함 -->
-			<img src="${pageContext.request.contextPath}/resources/images/section02_test3.jpg">
+			<img class="pc_img" src="${pageContext.request.contextPath}/resources/images/pc_section02.jpg">
+			<img class="tablet_img" src="${pageContext.request.contextPath}/resources/images/tablet_section02.jpg">
+			<img class="mobile_img" src="${pageContext.request.contextPath}/resources/images/mobile_section02.jpg">
 		</div><!-- section02Div end -->
 		<div class="section03Div" id="section03Div"><!-- 이벤트 -->
-			<img src="${pageContext.request.contextPath}/resources/images/section03_test2.jpg" usemap="#imgmap201812112013">
-			<map id="imgmap201812112013" name="imgmap201812112013">
+			<img class="pc_img" src="${pageContext.request.contextPath}/resources/images/pc_section03.jpg" usemap="#pc_section03_img">
+			<map class="pc_img" id="pc_section03_img" name="pc_section03_img">
 				<area shape="rect" alt="귀한인연 이벤트 더보기" title="" coords="867,728,1052,794" href="https://blog.naver.com/sygy2017/221223524684" target="" />
+			</map>
+			
+			<img class="tablet_img" src="${pageContext.request.contextPath}/resources/images/tablet_section03.jpg" usemap="#tablet_section03_img">
+			<map class="tablet_img" id="tablet_section03_img" name="tablet_section03_img">
+				<area shape="rect" alt="귀한인연 이벤트 더보기" title="" coords="385,1100,535,1154" href="https://blog.naver.com/sygy2017/221223524684" target="" />
+			</map>
+			
+			<img class="mobile_img" src="${pageContext.request.contextPath}/resources/images/mobile_section03.jpg" usemap="#mobile_section03_img">
+			<map class="mobile_img" id="mobile_section03_img" name="mobile_section03_img">
+				<area shape="rect" alt="귀한인연 이벤트 더보기" title="" coords="207,876,356,928" href="https://blog.naver.com/sygy2017/221223524684" target="" />
 			</map>
 		</div><!-- section03Div end -->
 		<div class="section04Div" id="section04Div"><!-- 문의상담 -->
@@ -517,7 +898,9 @@ $(function(){
 					    infowindow.close();
 					});
 				</script>
-			<img src="${pageContext.request.contextPath}/resources/images/section05_test4.jpg"> 
+			<img class="pc_img" src="${pageContext.request.contextPath}/resources/images/pc_section05.jpg">
+			<img class="tablet_img" src="${pageContext.request.contextPath}/resources/images/tablet_section05.jpg">
+			<img class="mobile_img" src="${pageContext.request.contextPath}/resources/images/mobile_section05.jpg">
 		</div><!-- section05Div end -->
 	</section>
 	<footer>

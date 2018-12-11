@@ -2,21 +2,35 @@
 	pageEncoding="UTF-8"%>
 <style>
 @media (min-width: 320px) and (max-width:767px){
-	
+	.headerWrap{
+		display:none;
+	}
 }
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 768px) and (max-width: 1024px) {
+	.mHeaderWrap{
+		display:none;
+	}
 	.headerWrap{
 		width:100%;
 		background: #fff;
 	}
 	.topInfo{
 		width:100%;
-		margin:0 auto;	
+		margin:0 auto;
+		background: pink;
+	}
+	.topInfo > p{
+		width:95%;
+		margin:0 auto;
+		text-align: right;
+		font-weight: bold;
+		font-size:17px;
+		line-height: 42px;
 	}
 	.menuWrap{
 		width:100%;
 		overflow: hidden;
-		padding:10px 4%;
+		padding:0 4%;
 		background: url("${pageContext.request.contextPath}/resources/images/menuBackground.png") repeat-x;
 		background-size: contain; 
 	} 
@@ -42,7 +56,10 @@
 		font-weight:600;
 	}
 }
-@media only screen and (min-width:1024px){
+@media only screen and (min-width:1025px){
+	.mHeaderWrap{
+		display:none;
+	}
 	.headerWrap{
 		width:100%;
 		background: #fff;
@@ -148,7 +165,7 @@
 				}, 500, 'linear'); 
 			}else if(divecieWidth > 767 && divecieWidth < 1025){
 				$('html, body').animate({
-					scrollTop : $($(this).attr('href')).offset().top - 98
+					scrollTop : $($(this).attr('href')).offset().top - 129
 				}, 500, 'linear');
 			}
 		});
@@ -165,8 +182,9 @@
 			<li><a href="#section01Div">귀한인연소개</a></li>
 			<li><a href="#section02Div">특별함</a></li>
 			<li><a href="#section03Div">이벤트</a></li>
-			<li><a href="#section04Div">문의상담</a></li>
+			<li><a href="#section04Div">상담문의</a></li>
 			<li><a href="#section05Div">오시는 길</a></li>
 		</ul>
 	</div>
 </div>
+<jsp:include page="mHeader.jsp"></jsp:include>
