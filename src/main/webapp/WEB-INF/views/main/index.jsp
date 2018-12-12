@@ -191,6 +191,10 @@
 	.section05Div > img{
 		width:100%;
 	}
+	footer{
+		width:100%;
+		padding-top:155px;
+	}
 }
 @media (min-width: 768px) and (max-width: 1024px) {
 	@media only screen and (orientation:portrait){
@@ -240,8 +244,7 @@
 			
 		}
 		.section03Div{
-			width:100%;
-			
+			width:100%;			
 		}
 		.section03Div > img{
 			width:100%;
@@ -355,6 +358,11 @@
 		.section05Div > img{
 			width:100%;
 		}
+		footer{
+		width:100%;
+		background: #E1E1E1;
+		padding-top:150px;
+	}
 	}
 	@media only screen and (orientation:landscape){
 		body{
@@ -517,6 +525,10 @@
 			width:100%;
 			height:45%;
 		}
+		footer{
+		width:100%;
+		background: #E1E1E1;
+	}
 	}
 	
 }
@@ -672,13 +684,17 @@
 		width:100%;
 		height:100%;
 	}
+	#map{
+		width:100%;
+		height:50%;
+	}
 	.section05Div > img{
 		width:100%;
 		height:50%;
 	}
-	#map{
+	footer{
 		width:100%;
-		height:50%;
+		background: #E1E1E1;
 	}
 }
 
@@ -902,9 +918,10 @@ $(function(){
 			<img class="tablet_img" src="${pageContext.request.contextPath}/resources/images/tablet_section05.jpg">
 			<img class="mobile_img" src="${pageContext.request.contextPath}/resources/images/mobile_section05.jpg">
 		</div><!-- section05Div end -->
+		<footer>
+			<jsp:include page="../include/footer.jsp"></jsp:include>
+		</footer>
 	</section>
-	<footer>
-		
-	</footer>
+	
 </body>
 </html>

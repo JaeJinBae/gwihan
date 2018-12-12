@@ -37,14 +37,14 @@ public class HomeController {
 	public String home(Locale locale, Model model) {
 		logger.info("Welcome home! The client locale is {}.", locale);
 		
-		Date date = new Date();
-		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
-		
-		String formattedDate = dateFormat.format(date);
-		
-		model.addAttribute("serverTime", formattedDate );
-		
 		return "main/index";
+	}
+	
+	@RequestMapping(value = "/privacyPolicy", method = RequestMethod.GET)
+	public String privacyPolicy(Locale locale, Model model) {
+		logger.info("개인정보취급방침");
+		
+		return "main/privacy_policy";
 	}
 	
 	@RequestMapping(value = "sendMail", method = RequestMethod.POST)
