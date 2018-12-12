@@ -173,7 +173,7 @@
 	.submitBtn > input{
 		font-size:18px;
 		font-weight: bold;
-		padding:5px;
+		padding:5px; 
 		border:0;
 		border-radius: 5px;
 		background: pink;
