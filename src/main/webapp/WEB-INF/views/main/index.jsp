@@ -34,7 +34,7 @@
 	}
 	section{
 		width:100%;
-		height:100%;
+		/* height:100%; */
 		padding-top:100px;
 	}
 	.mainBannerWrap{
@@ -100,7 +100,7 @@
 		font-family: sans-serif;
 		font-weight: bold !important;
 		text-align: center;
-		padding:30px 0;
+		padding:35px 0;
 	}
 	.section04Div > .formWrap > #f1 > table{
 		margin:0 auto; 
@@ -122,6 +122,7 @@
 	}
 	.privacyPolicy{
 		width:100%;
+		padding:15px 0;
 	}
 	.privacyPolicy > p{
 		text-align: right;
@@ -129,7 +130,7 @@
 		padding:10px;
 	}
 	.privacyPolicy > p > span{
-		font-size:18px;
+		font-size:16px;
 		cursor:pointer;
 	}
 	.privacyPolicy > p > span:hover{
@@ -154,7 +155,7 @@
 		font-size:14px;
 	}
 	.privacyCheckBox{
-		font-size:18px;
+		font-size:16px;
 		text-align: center;
 		margin-top:10px;
 	}
@@ -169,6 +170,7 @@
 	.submitBtn{
 		text-align: center;
 		margin-top:15px;
+		margin-bottom:35px;
 	}
 	.submitBtn > input{
 		font-size:18px;
@@ -186,14 +188,14 @@
 	}
 	#map{
 		width:100%;
-		height:50%;
+		height:290px !important;
 	}
 	.section05Div > img{
 		width:100%;
 	}
 	footer{
 		width:100%;
-		padding-top:155px;
+		/*padding-top:145px;*/
 	}
 }
 @media (min-width: 768px) and (max-width: 1024px) {

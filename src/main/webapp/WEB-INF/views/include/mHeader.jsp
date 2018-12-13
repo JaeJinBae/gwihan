@@ -164,7 +164,7 @@
 	<div class="menuBg"></div>
 	<div id="mySidenav" class="sidenav">
 		<a class="homeBtn" href="${pageContext.request.contextPath}/">
-			<img src="${pageContext.request.contextPath}/resources/images/mobileHomeIcon.png">
+			<img src="${pageContext.request.contextPath}/resources/images/homeBtnImg.png"><!-- mobileHomeIcon.png -->
 			<span>홈으로</span>
 		</a>
 		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
