@@ -731,7 +731,8 @@ $(function(){
 		var call=$("input[name='call']").val();
 		var gender=$("input[name='gender']:checked").val();
 		var marry=$("input[name='marry']:checked").val();
-		var city=$("input[name='job']").val();
+		var city=$("input[name='city']").val();
+		var job=$("input[name='job']").val();
 		var agreement1=$("input[name='privacy']").prop("checked");
 		var agreement2=$("input[name='agreement']").prop("checked");
 		
@@ -740,23 +741,27 @@ $(function(){
 			return false;
 		}
 		if(name=="" || name==null){
-			alert("이름을 입력해 주세요.");
+			alert("이름을 입력해주세요.");
 			return false;
 		}
 		if(call=="" || call==null){
-			alert("전화번호를 입력해 주세요.");
+			alert("전화번호를 입력해주세요.");
 			return false;
 		}
 		if(gender=="" || gender==null){
-			alert("성별을 선택해 주세요.");
+			alert("성별을 선택해주세요.");
 			return false;
 		}
 		if(marry=="" || marry==null){
 			alert("결혼이력을 선택해 주세요.");
 			return false;
 		}
+		if(city=="" || city==null){
+			alert("거주지를 입력해주세요.");
+			return false;
+		}
 		if(job=="" || job==null){
-			alert("직업을 입력해 주세요.");
+			alert("직업을 입력해주세요.");
 			return false;
 		}
 		
