@@ -79,7 +79,7 @@ public class HomeController {
 		try {
 			MimeMessage message = new MimeMessage(session);
 			message.setFrom(new InternetAddress(user));
-			message.addRecipient(Message.RecipientType.TO, new InternetAddress("bjj7425@naver.com"));
+			message.addRecipient(Message.RecipientType.TO, new InternetAddress("sygy2014@naver.com"));
 
 			// Subject
 			String subject = "귀한인연 고객 간편상담신청입니다.";
