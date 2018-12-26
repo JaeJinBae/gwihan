@@ -8,6 +8,14 @@
 <head>
 <meta charset="UTF-8">
 <title>대구결혼정보회사 귀한인연</title>
+<meta name="naver-site-verification" content="d53046e7ecfe442e3b973c1baeb37ec7fc75031d"/>
+<meta name="description" content="대구결혼정보회사 귀한인연, 초혼, 재혼, 맞춤매칭설계, 신분인증, 이색데이트, 정회원무제한매칭">
+<meta property="og:type" content="website">
+<meta property="og:title" content="대구결혼정보회사 귀한인연">
+<meta property="og:description" content="대구결혼정보회사 귀한인연, 초혼, 재혼, 맞춤매칭설계, 신분인증, 이색데이트, 정회원무제한매칭">
+<meta property="og:image" content="http://www.귀한인연.com/logo.png">
+<meta property="og:url" content="http://www.귀한인연.com">
+<link rel="canonical" href="http://www.귀한인연.com/">
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/common.css">
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/slick/slick.css" />
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/slick/slick-theme.css?ver=2" />
