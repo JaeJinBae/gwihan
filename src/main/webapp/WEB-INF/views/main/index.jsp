@@ -201,6 +201,32 @@
 	.section05Div > img{
 		width:100%;
 	}
+	/* popup */
+		.popupWrap{
+			position: absolute;
+			top:125px;
+			left:80px;
+			width:260px;
+			border:1px solid lightgray;
+		}
+		.popupWrap > .popupImgWrap{
+			width:100%;
+		}
+		.popupImgWrap > img{
+			width:100%;
+		}
+		.popupImgWrap > p{
+			width:100%;
+			height:35px;
+			text-align: right;
+			background: #fff;
+			font-size:15px;
+			line-height: 35px;
+			padding-right:20px;
+		}
+		.btnClose > span{
+			cursor: pointer;
+		}
 	footer{
 		width:100%;
 		/*padding-top:145px;*/
@@ -367,6 +393,32 @@
 		}
 		.section05Div > img{
 			width:100%;
+		}
+		/* popup */
+		.popupWrap{
+			position: absolute;
+			top:145px;
+			left:150px;
+			width:400px;
+			border:1px solid lightgray;
+		}
+		.popupWrap > .popupImgWrap{
+			width:100%;
+		}
+		.popupImgWrap > img{
+			width:100%;
+		}
+		.popupImgWrap > p{
+			width:100%;
+			height:35px;
+			text-align: right;
+			background: #fff;
+			font-size:15px;
+			line-height: 35px;
+			padding-right:20px;
+		}
+		.btnClose > span{
+			cursor: pointer;
 		}
 		footer{
 		width:100%;
@@ -535,10 +587,36 @@
 			width:100%;
 			height:45%;
 		}
+		/* popup */
+		.popupWrap{
+			position: absolute;
+			top:145px;
+			left:150px;
+			width:400px;
+			border:1px solid lightgray;
+		}
+		.popupWrap > .popupImgWrap{
+			width:100%;
+		}
+		.popupImgWrap > img{
+			width:100%;
+		}
+		.popupImgWrap > p{
+			width:100%;
+			height:35px;
+			text-align: right;
+			background: #fff;
+			font-size:15px;
+			line-height: 35px;
+			padding-right:20px;
+		}
+		.btnClose > span{
+			cursor: pointer;
+		}
 		footer{
-		width:100%;
-		background: #E1E1E1;
-	}
+			width:100%;
+			background: #E1E1E1;
+		}
 	}
 	
 }
@@ -702,6 +780,32 @@
 		width:100%;
 		height:50%;
 	}
+	/* popup */
+	.popupWrap{
+		position: absolute;
+		top:185px;
+		left:200px;
+		width:500px;
+		border:1px solid lightgray;
+	}
+	.popupWrap > .popupImgWrap{
+		width:100%;
+	}
+	.popupImgWrap > img{
+		width:100%;
+	}
+	.popupImgWrap > p{
+		width:100%;
+		height:35px;
+		text-align: right;
+		background: #fff;
+		font-size:15px;
+		line-height: 35px;
+		padding-right:20px;
+	}
+	.btnClose > span{
+		cursor: pointer;
+	}
 	footer{
 		width:100%;
 		background: #E1E1E1;
@@ -774,6 +878,11 @@ $(function(){
 		}
 		
 	});
+	
+	//popup
+	$(".btnClose > span").click(function(){
+		$(".popupWrap").css("display","none");
+	})
 });
 </script>
 </head>
@@ -933,6 +1042,12 @@ $(function(){
 			<img class="tablet_img" src="${pageContext.request.contextPath}/resources/images/tablet_section05.jpg">
 			<img class="mobile_img" src="${pageContext.request.contextPath}/resources/images/mobile_section05.jpg">
 		</div><!-- section05Div end -->
+		<div class="popupWrap">
+			<div class="popupImgWrap">
+				<img src="${pageContext.request.contextPath}/resources/images/popup20181228.jpg">
+				<p class="btnClose"><span>[닫기]</span></p>
+			</div>
+		</div>
 		<footer>
 			<jsp:include page="../include/footer.jsp"></jsp:include>
 		</footer>
