@@ -25,6 +25,9 @@
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=c2e3ed09f957710bbd6a786c6974b3b1&libraries=drawing"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style type="text/css">
+.popupWrap{
+	/* display:none; */
+}
 @media (min-width: 320px) and (max-width:767px){
 	body{
 		position: relative;
@@ -1044,7 +1047,7 @@ $(function(){
 		</div><!-- section05Div end -->
 		<div class="popupWrap">
 			<div class="popupImgWrap">
-				<img src="${pageContext.request.contextPath}/resources/images/popup20181228.jpg">
+				<img src="${pageContext.request.contextPath}/resources/images/popup20190220.jpg">
 				<p class="btnClose"><span>[닫기]</span></p>
 			</div>
 		</div>
