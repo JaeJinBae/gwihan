@@ -59,7 +59,7 @@ public class HomeController {
 		logger.info("sendmail 진입");
 		String host = "smtp.naver.com";
 		String user = "bjj7425";
-		String password = "qowowls7425!";
+		String password = "qowowls12!@";
 		int port=465;
 		
 		Properties props = new Properties();
